@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trueclaw-plugin-echo"
+version = "0.1.0"
+description = "Echo channel plugin example for TrueClaw (chapter 12)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["trueclaw @ file:///${PROJECT_ROOT}/.."]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.entry-points."trueclaw.plugins.channel"]
+echo = "trueclaw_plugin_echo.plugin:plugin_entry"

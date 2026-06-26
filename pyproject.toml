@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trueclaw"
+version = "0.1.0"
+description = "Runnable TrueClaw MVP"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+trueclaw = "trueclaw.cli.main:entrypoint"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.entry-points."trueclaw.plugins.channel"]
+echo = "trueclaw_plugins.echo.channel:EchoChannel"
+slack = "trueclaw_plugins.slack.channel:SlackChannel"

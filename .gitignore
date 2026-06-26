@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+.pydeps/
+.idea/
+.DS_Store
+*.local.json
+gateway-*.lock
+
+# 本地书籍草稿与对照材料（不入库）
+docs/
+md_chapters_to_docx.py
+books- Microsoft-word-version/
+reference-repo/
