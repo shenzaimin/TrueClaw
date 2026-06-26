@@ -205,4 +205,4 @@ bash scripts/ci-verify.sh
 
 ## 许可证
 
-见仓库许可证文件（若未单独声明，以项目维护者约定为准）。
+[MIT License](./LICENSE)
